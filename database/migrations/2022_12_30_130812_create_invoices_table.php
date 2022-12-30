@@ -3,6 +3,7 @@
 use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
+use App\Models\Customer;
 
 return new class extends Migration
 {
@@ -15,6 +16,11 @@ return new class extends Migration
     {
         Schema::create('invoices', function (Blueprint $table) {
             $table->id();
+            $table->foreignIdFor(Customer::class);
+            $table->integer('amount');
+            $table->string('status');
+            $table->dateTime('billed_at');
+            $table->dateTime('paid_at')->nullable();
             $table->timestamps();
         });
     }
