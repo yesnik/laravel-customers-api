@@ -12,4 +12,7 @@ This app demonstrates Laravel 9 functional for API creating.
   ```
   php artisan make:model Customer --fms
   ```
-
+- Create resource CustomerController, version 1:
+  ```
+  php artisan make:controller Api\\V1\\CustomerController --resource
+  ```
