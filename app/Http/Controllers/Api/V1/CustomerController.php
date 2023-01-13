@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Api\V1;
 
 use App\Http\Controllers\Controller;
+use App\Http\Resources\V1\CustomerCollection;
 use App\Http\Resources\V1\CustomerResource;
 use App\Models\Customer;
 use Illuminate\Http\Request;
@@ -11,12 +12,10 @@ class CustomerController extends Controller
 {
     /**
      * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
      */
     public function index()
     {
-        return Customer::paginate(15);
+        return new CustomerCollection(Customer::paginate(15));
     }
 
     /**

@@ -23,6 +23,7 @@ class CustomerResource extends JsonResource
             'postalCode' => $this->postal_code,
             'type' => $this->type,
 
+            'someAttribute' => 'Some useful attribute',
         ];
     }
 }

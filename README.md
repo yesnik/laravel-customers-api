@@ -13,6 +13,7 @@ This app demonstrates Laravel 9 functional for API creating.
 
 - Generate fake records for customers and invoices: `php artisan db:seed`
 - Edit `app/Http/Resources/V1/CustomerResource.php` to define fields returned by CustomerController, show action
+- Edit `app/Http/Resources/V1/CustomerCollection.php` to define fields returned by CustomerController, index action
 
 ## Installation
 
@@ -31,7 +32,11 @@ This app demonstrates Laravel 9 functional for API creating.
   ```
   php artisan make:controller Api\\V1\\CustomerController --resource
   ```
-- Create resource for Customer. Resource allows us to transform an eloquent model into a JSON response:
+- Create resource for Customer. A resource class represents a single model that needs to be transformed into a JSON structure:
   ```
   php artisan make:resource V1\\CustomerResource
+  ```
+- Create resource for Customer collection:
+  ```
+  php artisan make:resource V1\\CustomerCollection
   ```
