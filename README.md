@@ -12,6 +12,7 @@ This app demonstrates Laravel 9 functional for API creating.
 ### For developers
 
 - Generate fake records for customers and invoices: `php artisan db:seed`
+- Edit `app/Http/Resources/V1/CustomerResource.php` to define fields returned by CustomerController, show action
 
 ## Installation
 
