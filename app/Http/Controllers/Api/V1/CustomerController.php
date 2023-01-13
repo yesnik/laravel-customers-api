@@ -15,7 +15,7 @@ class CustomerController extends Controller
      */
     public function index()
     {
-        return Customer::all();
+        return Customer::paginate(15);
     }
 
     /**
@@ -41,13 +41,10 @@ class CustomerController extends Controller
 
     /**
      * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show(Customer $customer)
     {
-        //
+        return $customer;
     }
 
     /**
